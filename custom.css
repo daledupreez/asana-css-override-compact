@@ -1,0 +1,117 @@
+/**
+ * Custom styles to make Asana be more compact and clearly delineated.
+ * Styles are organized mostly by location on the screen, with vertical space
+ * adjustments at the end of the file, also mostly in appearance order.
+ */
+
+/* Reduce height of top toolbar */
+.SingleTaskPaneToolbar {
+    height: 40px;
+}
+
+/* Reduce size of title */
+.SingleTaskTitleInput-taskName .AutogrowTextarea-input,
+.SingleTaskTitleInput-taskName .AutogrowTextarea-shadow {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* Reduce height of custom fields that don't exist in the current project */
+.CustomPropertyOrphanedDetailsRow .LabeledRowStructure-labelContainer {
+    height: 20px;
+}
+
+/* Remove whitespace at bottom of main description text when not editing */
+.TaskDescription-textEditor.TaskDescription-textEditor--willContainToolbar .ql-editor {
+    padding-bottom: 0px;
+}
+
+/* Add background colour to comment entries to make them stand out more. */
+.TaskStoryFeed .FeedBlockStory .BlockStory {
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Reinstate the background colour and padding for pinned comments. */
+.TaskStoryFeed .FeedBlockStory.FeedBlockStory--pinnedAtTop .BlockStory {
+    background-color: inherit;
+    padding: 0px;
+}
+
+/* Add a separator between the title and content of each comment */
+.TaskStoryFeed .FeedBlockStory .BlockStory .BlockStory-headerContent {
+    border-bottom: 1px solid #CCC;
+}
+
+/* Lighten separator colour for pinned comments */
+.TaskStoryFeed .FeedBlockStory.FeedBlockStory--pinnedAtTop .BlockStory .BlockStory-headerContent {
+    border-bottom-color: #DDD;
+}
+
+/* Add padding as a result of separator for comments */
+.BlockStory-body {
+    padding-top: 2px;
+}
+
+/* Increase size of date text */
+.BlockStory-metadata {
+    font-size: 13px;
+}
+
+/* Make internal links bold */
+.TaskStoryFeed-expandLink,
+.TaskStoryFeed-expandMiniStoriesLink,
+.TruncatedRichText-expand {
+    font-weight: bold;
+}
+
+/* Hide all separators */
+.TaskStoryFeed-activitySeparator {
+    display: none;
+}
+
+/* Vertical space adjustments */
+
+.SingleTaskPane-titleRow,
+.SingleTaskPane-projects,
+.SingleTaskPane-tags {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.TaskPaneAssigneeDueDateRowStructure {
+    padding-bottom: 10px;
+}
+
+.SingleTaskPane-premiumFeaturesSection {
+    margin-bottom: 5px;
+}
+
+.TaskStoryFeed-topSeparator + .TaskStoryFeed-taskCreationStory,
+.TaskStoryFeed-pinnedSeparator + .TaskStoryFeed-taskCreationStory {
+    margin-top: 0px;
+}
+
+.TaskCreationBlockStory,
+.FeedBlockStory {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.TaskStoryFeed-activitySeparator,
+.TaskStoryFeed-expandMiniStoriesLink,
+.TaskStoryFeed-blockStory + .TaskStoryFeed-expandLink,
+.TaskStoryFeed-miniStory + .TaskStoryFeed-blockStory,
+.TaskStoryFeed-activitySeparator + .TaskStoryFeed-blockStory,
+.TaskStoryFeed-separator + .TaskStoryFeed-miniStory,
+.TaskStoryFeed-miniStory + .TaskStoryFeed-activitySeparator,
+.TaskStoryFeed-blockStory + .TaskStoryFeed-miniStory,
+.TaskStoryFeed-activitySeparator + .TaskStoryFeed-expandMiniStoriesLink,
+.TaskAncestry-ancestorProjects {
+    margin-top: 5px;
+}
+
+.TaskStoryFeed-expandLink {
+    margin-bottom: 5px;
+}
